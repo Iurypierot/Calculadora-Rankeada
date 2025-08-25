@@ -1,12 +1,11 @@
 function calcularRank(vitorias, derrotas) {
-  
   let saldoVitorias = vitorias - derrotas;
   let nivel = "";
 
-  
+  // Estruturas de decisão
   if (vitorias < 10) {
     nivel = "Ferro";
-  } else if (vitorias >= 11 && vitorias <= 20) {
+  } else if (vitorias >= 10 && vitorias <= 20) {
     nivel = "Bronze";
   } else if (vitorias >= 21 && vitorias <= 50) {
     nivel = "Prata";
@@ -20,12 +19,12 @@ function calcularRank(vitorias, derrotas) {
     nivel = "Imortal";
   }
 
+  
   return `O Herói tem um saldo de ${saldoVitorias} está no nível de ${nivel}`;
 }
 
-
+// Testando a função
 console.log(calcularRank(75, 20)); 
-console.log(calcularRank(8, 5));   
+console.log(calcularRank(8, 5));    
+console.log(calcularRank(15, 2));   
 console.log(calcularRank(120, 30)); 
-
-
